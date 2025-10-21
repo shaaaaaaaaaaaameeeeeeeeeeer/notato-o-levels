@@ -6,36 +6,105 @@
   <title>Notato O Levels</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #e8f5e9;
-      color: #1b5e20;
-      text-align: center;
-      padding: 50px;
+      font-family: Georgia, 'Times New Roman', serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      line-height: 1.6;
     }
-    h1 {
-      font-size: 2.5em;
-      color: #2e7d32;
-    }
-    p {
-      font-size: 1.2em;
-    }
-    .btn {
-      background-color: #66bb6a;
+    header {
+      background-color: #4caf50;
       color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s;
+      padding: 20px 0;
+      text-align: center;
     }
-    .btn:hover {
-      background-color: #43a047;
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    nav {
+      text-align: center;
+      margin: 10px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #4caf50;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .article-card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .article-card h2 {
+      margin-top: 0;
+      color: #1b5e20;
+    }
+    .article-card p {
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f1f1;
+      color: #555;
+      margin-top: 40px;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Notato O Levels 📚</h1>
-  <p>Your one-stop site for O Level study notes and resources.</p>
-  <button class="btn">Explore Notes</button>
+  <header>
+    <h1>Notato O Levels</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#articles">Articles</a>
+      <a href="#about">About</a>
+      <a href="#publish">Publish</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="articles">
+      <div class="article-card">
+        <h2>Cellular Respiration — Short Notes</h2>
+        <p>Understand glycolysis, Krebs cycle, and electron transport chain with clear examples for easy reading.</p>
+      </div>
+      <div class="article-card">
+        <h2>Mughal Empire — Timeline</h2>
+        <p>Explore emperors, major events, and important historical insights in a simple classic layout.</p>
+      </div>
+      <div class="article-card">
+        <h2>Quadratic Formulas & Tricks</h2>
+        <p>Step-by-step explanations and tricks to solve quadratic problems quickly and clearly.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="article-card">
+        <h2>About Notato</h2>
+        <p>Notato O Levels is your easy-to-read platform for study notes and articles. Classic style for simple navigation and understanding.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    © <span id="year"></span> Notato O Levels — Built by Shahmeer
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
